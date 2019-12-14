@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/borglab/gtsam.svg?branch=develop)](https://travis-ci.com/borglab/gtsam/)
+gcc/clang: [![Build Status](https://travis-ci.com/borglab/gtsam.svg?branch=develop)](https://travis-ci.com/borglab/gtsam/) MSVC: [![Build status](https://ci.appveyor.com/api/projects/status/hqb4sdrw60fbebgr?svg=true)](https://ci.appveyor.com/project/jlblancoc/gtsam)
 
 # README - Georgia Tech Smoothing and Mapping library
 
