@@ -51,8 +51,10 @@ endmacro()
 #   excludedFiles: A list of files or globs to exclude, e.g. "C*.cpp;BrokenExample.cpp".  Pass
 #                  an empty string "" if nothing needs to be excluded.
 #   linkLibraries: The list of libraries to link to.
-macro(gtsamAddExamplesGlob globPatterns excludedFiles linkLibraries)
-	gtsamAddExesGlob_impl("${globPatterns}" "${excludedFiles}" "${linkLibraries}" "examples" ${GTSAM_BUILD_EXAMPLES_ALWAYS})
+macro(gtsamAddExamplesGlob globPatterns excludedFiles linkLibraries libraryName)
+	add_custom_target(${libraryName}_examples)
+	gtsamAddExesGlob_impl("${globPatterns}" "${excludedFiles}" "${linkLibraries}" "${libraryName}_examples" ${GTSAM_BUILD_EXAMPLES_ALWAYS})
+	add_dependencies(examples ${libraryName}_examples)
 endmacro()
 
 

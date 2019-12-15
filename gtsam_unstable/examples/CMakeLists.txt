@@ -2,4 +2,4 @@ set (excluded_examples
     # fileToExclude.cpp
 )
 
-gtsamAddExamplesGlob("*.cpp" "${excluded_examples}" "gtsam_unstable")
+gtsamAddExamplesGlob("*.cpp" "${excluded_examples}" "gtsam_unstable" "gtsam_unstable")
